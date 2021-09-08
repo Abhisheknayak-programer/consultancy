@@ -1,0 +1,183 @@
+/*******************/
+/* HEADER DESIGN */
+/*******************/
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #195fa9;
+  position: relative;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+header nav ul {
+  display: flex;
+  min-width: 30%;
+  justify-content: space-evenly;
+}
+
+header nav ul li {
+  list-style: none;
+  padding: 2rem 3rem;
+}
+header nav ul li:hover {
+  background-color: #fff;
+}
+header nav ul li:hover a {
+  color: #195fa9;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+/*********************/
+/* NAVBAR DROPDOWN */
+/*********************/
+.dropDown {
+  background-color: #fff;
+  padding: 2rem 15rem;
+  display: flex;
+  justify-content: space-evenly;
+  position: absolute;
+  top: 10;
+  left: 0%;
+  z-index: 10;
+}
+.dropDown .dropDown__INNER {
+  border-right: 3px solid rgb(3, 40, 145);
+  padding: 0 14rem 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.dropDown .dropDown__INNER a {
+  text-decoration: none;
+  color: #999;
+  font-weight: 500;
+  transition: all 0.4s ease;
+}
+
+.dropDown .dropDown__INNER a:hover {
+  color: rgb(3, 40, 145);
+}
+
+.navDisabled {
+  display: none;
+}
+
+.dropDown__col__2,
+.dropDown__col__3 {
+  opacity: 0;
+}
+
+/******************************/
+/* MEDIA QUERIES FOR NAVBAR */
+/******************************/
+/******************/
+/* NAVBAR MEDIA */
+/*****************/
+@media (max-width: 1075px) {
+  header nav ul li {
+    padding: 2rem 1rem;
+  }
+  header nav ul li a {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 700px) {
+  header nav ul li {
+    padding: 2rem 1rem;
+  }
+  header nav ul li a {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  header img {
+    width: 30px;
+    height: 30px;
+  }
+  header nav ul li {
+    padding: 2rem 0.5rem;
+  }
+  header nav ul li a {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 385px) {
+  header nav ul li {
+    padding: 1.5rem 0.2rem;
+  }
+  header nav ul li a {
+    font-size: 0.7rem;
+  }
+}
+
+/********************/
+/* DROP DOWN MEDIA*/
+/********************/
+@media (max-width: 1565px) {
+  .dropDown .dropDown__INNER {
+    padding-right: 10rem;
+  }
+}
+
+@media (max-width: 1380px) {
+  .dropDown .dropDown__INNER {
+    padding-right: 6rem;
+  }
+}
+
+@media (max-width: 1195px) {
+  .dropDown {
+    padding: 2rem 10rem;
+    width: 100%;
+  }
+}
+
+@media (max-width: 1020px) {
+  .dropDown {
+    padding: 2rem 5rem;
+  }
+}
+
+@media (max-width: 865px) {
+  .dropDown {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 770px) {
+  .dropDown {
+    padding: 2rem 0rem;
+  }
+
+  .dropDown .dropDown__INNER {
+    padding-right: 2rem;
+  }
+}
+
+@media (max-width: 505px) {
+  .dropDown .dropDown__INNER {
+    padding-right: 1rem;
+    padding-left: 0;
+  }
+  .ManipulatedLInks {
+    font-size: 0.8rem;
+  }
+}
